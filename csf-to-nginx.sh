@@ -49,6 +49,12 @@ cd /usr/local/directadmin/custombuild
 cd /usr/local/directadmin/custombuild
 ./build set opcache yes
 ./build opcache
+cd /usr/local/directadmin/custombuild
+./build update
+./build update_da
+./build set webserver nginx_apache
+./build nginx_apache
+./build rewrite_confs
 echo "action=rewrite&value=nginx" >> /usr/local/directadmin/data/task.queue  
 echo "action=rewrite&value=nginx" >> /usr/local/directadmin/dataskq
 service httpd restart
