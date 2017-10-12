@@ -230,6 +230,7 @@ killall -KILL httpd
 
 netstat -ntlup
 curl -I http://websanco.com
+sudo shutdown -r now
 
 
 
