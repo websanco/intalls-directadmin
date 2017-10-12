@@ -1,0 +1,28 @@
+yum install wget gcc gcc-c++ flex bison make bind bind-libs bind-utils openssl openssl-devel perl quota libaio libcom_err-devel libcurl-devel gd zlib-devel zip unzip libcap-devel cronie bzip2 cyrus-sasl-devel perl-ExtUtils-Embed autoconf automake libtool which patch mailx db4-devel  
+wget http://www.directadmin.com/setup.sh  
+chmod 755 setup.sh  
+./setup.sh  
+
+#Cusomebuild 1. (2.0)
+#choose: Eth0  
+#Yes .vvv  
+
+#That... ok  
+#intalls CFS  
+
+wget http://files.directadmin.com/services/all/csf/csf_install.sh  
+/bin/sh ./csf_install.sh  
+#config  
+nano /etc/csf/csf.conf
+
+#TESTING = “1” --> TESTING = “0”
+
+##start when reboot
+chkconfig --level 235 csf on
+service csf restart
+
+#Remove when need
+/etc/csf/uninstall.sh
+
+
+
