@@ -64,7 +64,35 @@ echo "force_hostname=your.hostname.com" >> directadmin.conf
 echo "ssl_redirect_host=your.hostname.com" >> directadmin.conf
 service directadmin restart
 
-**5.Let's Encrypt For User**  
+
+**6.INSTALL PHP 5.6 VS PHP 5.4 php-fpm**
+
+cd /usr/local/directadmin/custombuild
+./build update
+./build set php1_release 5.6
+./build set php2_release 5.4
+./build set php1_mode php-fpm
+./build set php2_mode php-fpm
+./build set mod_ruid2 no
+
+./build php n
+./build rewrite_confs
+
+##MORE: cd /usr/local/directadmin/custombuild vi options.conf
+
+**7.SUPHP**
+cd /usr/local/directadmin/custombuild
+./build update
+./build clean
+./build suphp
+
+##MORE: Require
+./build roundcube
+./build squirrelmail
+./build phpmyadmin
+
+
+
 
 
 
