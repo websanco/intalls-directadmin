@@ -225,6 +225,11 @@ echo 3 > /proc/sys/vm/drop_caches
 netstat -n | grep :80 |wc -l
 watch "netstat -an | grep ':80' | awk '{print \$5}' | sed s/'::ffff:'// | cut -d\":\" -f1 | sort | uniq -c"
 killall -KILL httpd
+/etc/init.d/mysqld restart
+
+
+netstat -ntlup
+curl -I http://websanco.com
 
 
 
