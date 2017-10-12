@@ -112,6 +112,40 @@ echo "action=rewrite&value=nginx" >> /usr/local/directadmin/dataskq
 service httpd restart
 service nginx restart
 
+#### MORE CONFIG ###
+php -i | grep php.ini  
+php -i | grep ini
+
+ShiftZZ (save - exit)   :wq
+ShiftZQ (Exit Dont save) 
+:.,$d  (delete linux vi)
+Ctrl + C  
+
+
+https://help.directadmin.com/item.php?id=354 (HOW INTALL)  
+https://help.directadmin.com/item.php?id=284 (ALL CONFIG)  
+https://help.directadmin.com/item.php?id=641 (Quick Add)  
+
+check_subdomain_owner=1  
+hide_ip_user_numbers=0  
+
+echo "check_subdomain_owner=0" >> /usr/local/directadmin/conf/directadmin.conf  
+echo "hide_ip_user_numbers=0" >> /usr/local/directadmin/conf/directadmin.conf  
+
+cd /usr/local/directadmin
+./directadmin c | grep ^check_subdomain_owner=  
+
+cd /usr/local/directadmin
+echo "action=directadmin&value=restart" >> data/task.queue; ./dataskq d2000  
+
+
+
+service directadmin restart
+service csf restart
+service httpd restart
+service varnish restart
+service nginx restart
+
 
 
 
