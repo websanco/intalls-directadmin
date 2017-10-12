@@ -54,6 +54,7 @@ echo "action=rewrite&value=nginx" >> /usr/local/directadmin/dataskq
 service httpd restart
 service nginx restart
 cd /usr/local/directadmin
+cd
 echo "action=directadmin&value=restart" >> data/task.queue; ./dataskq d2000
 cd /usr/local/directadmin/custombuild
 ./build rewrite_confs
