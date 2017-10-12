@@ -24,6 +24,7 @@ nano /etc/csf/csf.conf
 chkconfig --level 235 csf on  
 service csf restart  
 
+###MORE
 #Remove when need  
 /etc/csf/uninstall.sh  
 
@@ -32,6 +33,31 @@ service csf restart
 /sbin/iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT  
 /sbin/iptables -I INPUT 1 -p tcp --dport 21 -j ACCEPT  
 /sbin/iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT  
+service iptables save  
+
+###MORE  
+service iptables status  
+iptables -L  
+
+**4.Let's Encrypt For User**  
+##4.1 Intall Let's Encrypt For Member>Reseller->User
+/usr/local/directadmin/directadmin v ##view version (require 1.5--->)
+echo "letsencrypt=1" >> /usr/local/directadmin/conf/directadmin.conf  
+echo "enable_ssl_sni=1" >> /usr/local/directadmin/conf/directadmin.conf  
+/etc/init.d/directadmin restart  
+wget -O /usr/local/directadmin/scripts/letsencrypt.sh http://files.directadmin.com/services/all/letsencrypt.sh  
+cd /usr/local/directadmin/custombuild  
+./build update  
+./build letsencrypt  
+./build rewrite_confs  
+
+**4.Let's Encrypt SSL For Port 2222** 
+
+
+
+
+
+
 
 
 
