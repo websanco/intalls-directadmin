@@ -91,6 +91,28 @@ cd /usr/local/directadmin/custombuild
 ./build squirrelmail
 ./build phpmyadmin
 
+**8.Opache ZEND direcadmin**
+
+cd /usr/local/directadmin/custombuild
+./build set opcache yes
+./build opcache
+
+**9.Reverse-proxy NGINX for Apache**
+cd /usr/local/directadmin/custombuild
+./build update
+./build update_da
+./build set webserver nginx_apache
+./build nginx_apache
+./build rewrite_confs
+
+##MORE: Require   
+echo "action=rewrite&value=nginx" >> /usr/local/directadmin/data/task.queue  
+echo "action=rewrite&value=nginx" >> /usr/local/directadmin/dataskq
+
+service httpd restart
+service nginx restart
+
+
 
 
 
