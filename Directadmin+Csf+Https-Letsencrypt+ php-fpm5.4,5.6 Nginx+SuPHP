@@ -122,6 +122,10 @@ ShiftZQ (Exit Dont save)
 Ctrl + C  
 
 
+
+upload_max_filesize = 100M
+post_max_size = 100M
+
 https://help.directadmin.com/item.php?id=354 (HOW INTALL)  
 https://help.directadmin.com/item.php?id=284 (ALL CONFIG)  
 https://help.directadmin.com/item.php?id=641 (Quick Add)  
@@ -181,8 +185,19 @@ ExpiresDefault "access plus 2 days"
   Order allow,deny
   Deny from all
 </Files>
-
+php_value upload_max_filesize 300M
+php_value post_max_size 300M
 # END WordPress
+
+
+ADD TO wp-config.php:
+define( 'WP_MAX_MEMORY_LIMIT', '512M' )
+
+ADD TO PHP.INI
+memory_limit=512M
+
+ADD TO  HTACCESS 
+php_value memory_limit 512M
 
 
 
