@@ -22,6 +22,8 @@ service csf restart
 service iptables save  
 echo "letsencrypt=1" >> /usr/local/directadmin/conf/directadmin.conf  
 echo "enable_ssl_sni=1" >> /usr/local/directadmin/conf/directadmin.conf
+echo "check_subdomain_owner=0" >> /usr/local/directadmin/conf/directadmin.conf  
+echo "hide_ip_user_numbers=0" >> /usr/local/directadmin/conf/directadmin.conf 
 /etc/init.d/directadmin restart  
 wget -O /usr/local/directadmin/scripts/letsencrypt.sh http://files.directadmin.com/services/all/letsencrypt.sh  
 cd /usr/local/directadmin/custombuild  
@@ -51,3 +53,9 @@ echo "action=rewrite&value=nginx" >> /usr/local/directadmin/data/task.queue
 echo "action=rewrite&value=nginx" >> /usr/local/directadmin/dataskq
 service httpd restart
 service nginx restart
+cd /usr/local/directadmin
+echo "action=directadmin&value=restart" >> data/task.queue; ./dataskq d2000
+./build rewrite_confs
+cd /usr/local/directadmin/custombuild
+ 
+
