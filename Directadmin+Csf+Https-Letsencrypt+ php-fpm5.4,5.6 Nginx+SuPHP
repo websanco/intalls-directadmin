@@ -51,7 +51,23 @@ cd /usr/local/directadmin/custombuild
 ./build letsencrypt  
 ./build rewrite_confs  
 
-**4.Let's Encrypt SSL For Port 2222** 
+##4.2 Let's Encrypt SSL For Port 2222
+#Readmore: https://help.directadmin.com/item.php?id=629
+
+cd /usr/local/directadmin/scripts
+./letsencrypt.sh request your.hostname.com 4096  ## chage your.hostname.com
+
+cd /usr/local/directadmin/conf
+perl -pi -e 's/SSL=0/SSL=1/' directadmin.conf
+echo "carootcert=/usr/local/directadmin/conf/carootcert.pem" >> directadmin.conf
+echo "force_hostname=your.hostname.com" >> directadmin.conf
+echo "ssl_redirect_host=your.hostname.com" >> directadmin.conf
+service directadmin restart
+
+**5.Let's Encrypt For User**  
+
+
+
 
 
 
