@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/csf.s
 chmod 755 csf.sh  
 ./csf.sh  
 
-# intalls HTTPS DONMIAN
+# intalls HTTPS DOMAIN
 ##4.2 Let's Encrypt SSL For Port 2222
 #Readmore: https://help.directadmin.com/item.php?id=629
 
