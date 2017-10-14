@@ -232,6 +232,12 @@ netstat -ntlup
 curl -I http://websanco.com
 sudo shutdown -r now
 
+sudo yum update
+cd /usr/local/directadmin/custombuild
+./build set php1_release 7.0
+./build update
+./build php d
+
 
 
 
