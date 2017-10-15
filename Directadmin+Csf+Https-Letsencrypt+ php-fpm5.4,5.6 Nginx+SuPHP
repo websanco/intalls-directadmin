@@ -239,6 +239,14 @@ cd /usr/local/directadmin/custombuild
 ./build php d
 
 
+ vi /etc/selinux/config 
+ SELINUX=permissive
+SELINUXTYPE=targeted
+reboot
+
+sestatus
+
+
 
 
 
