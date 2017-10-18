@@ -245,6 +245,7 @@ SELINUXTYPE=targeted
 reboot
 
 sestatus
+vim /etc/mime.types” và add thêm “application/x-gzip gz tgz “
 
 
 
