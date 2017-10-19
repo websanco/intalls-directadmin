@@ -248,6 +248,35 @@ sestatus
 vim /etc/mime.types” và add thêm “application/x-gzip gz tgz “
 
 
+CENTOST 7
+
+If you are familiar with iptables service like in centos 6 or earlier, you can still use iptables service by manual installation:
+
+step 1 => install epel repo
+
+yum install epel-release
+step 2 => install iptables service
+
+yum install iptables-services
+step 3 => stop firewalld service
+
+systemctl stop firewalld
+step 4 => disable firewalld service on startup
+
+systemctl disable firewalld
+step 5 => start iptables service
+
+systemctl start iptables
+step 6 => enable iptables on startup
+
+systemctl enable iptables
+finally you're now can editing your iptables config at /etc/sysconfig/iptables.
+
+So -> edit rule -> reload/restart.
+
+do like older centos with same function like firewalld.
+
+
 
 
 
