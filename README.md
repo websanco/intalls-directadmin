@@ -5,6 +5,11 @@ wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/insta
 chmod 755 install.sh  
 ./install.sh  
 
+# Intalls  ALL A_Z 
+wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/nginx-directadmin.sh -O nginx-directadmin.sh    
+chmod 755 nginx-directadmin.sh   
+./nginx-directadmin.sh    
+
 
 # Intalls CSF - OPENPORT  
 wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/openport-cfs.sh -O openport-cfs.sh  
