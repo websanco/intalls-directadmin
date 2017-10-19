@@ -2,11 +2,14 @@
 
 #intall
 yum install perl-libwww-perl
-cd /tmp
+cd /usr/src/
 wget https://download.configserver.com/csf.tgz
 tar -xzf csf.tgz
 cd csf
 sh install.sh
+cd /usr/local/csf/bin/
+perl csftest.pl
+
 chkconfig --level 235 csf on  
 echo "exe:/bin/tar" >> /etc/csf/csf.pignore
 systemctl start csf
