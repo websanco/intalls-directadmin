@@ -66,3 +66,24 @@ cd /usr/local/directadmin/custombuild
 ./build squirrelmail
 ./build phpmyadmin
 ./build rewrite_confs
+
+
+cd /usr/local/directadmin/custombuild
+mkdir -p mysql
+cd mysql
+wget http://files.directadmin.com/services/all/mysql/64-bit/5.5.41/MySQL-client-5.5.41-1.linux2.6.x86_64.rpm
+wget http://files.directadmin.com/services/all/mysql/64-bit/5.5.41/MySQL-devel-5.5.41-1.linux2.6.x86_64.rpm
+wget http://files.directadmin.com/services/all/mysql/64-bit/5.5.41/MySQL-server-5.5.41-1.linux2.6.x86_64.rpm
+wget http://files.directadmin.com/services/all/mysql/64-bit/5.5.41/MySQL-shared-5.5.41-1.linux2.6.x86_64.rpm
+rpm -e --noscripts `rpm -qa | grep MariaDB`
+cd mysql
+rpm -ivh MySQL*5.5.41*.rpm
+
+cd ..
+./build set mysql 5.6
+./build set mysql_inst yes
+./build mysql
+
+./build php n
+
+
