@@ -8,6 +8,8 @@ tar -xzf csf.tgz
 cd csf
 sh install.sh
 chkconfig --level 235 csf on  
+echo "exe:/bin/tar" >> /etc/csf/csf.pignore
+systemctl  lfd restart
 
 echo "letsencrypt=1" >> /usr/local/directadmin/conf/directadmin.conf  
 echo "enable_ssl_sni=1" >> /usr/local/directadmin/conf/directadmin.conf
