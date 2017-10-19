@@ -1,6 +1,8 @@
 # Intalls directadmin CENTOST 7
 
-systemctl stop firewalld  
+ 
+systemctl disable firewalld
+systemctl stop firewalld
 yum install wget  
 wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/install.sh -O install.sh  
 chmod 755 install.sh  
