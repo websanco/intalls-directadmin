@@ -45,7 +45,7 @@ service httpd restart
 service nginx restart
 cd /usr/local/directadmin
 echo "action=directadmin&value=restart" >> data/task.queue; ./dataskq d2000
-cd /usr/local/directadmin/custombuild
+
 cd /usr/local/directadmin/custombuild
 ./build update
 ./build clean
