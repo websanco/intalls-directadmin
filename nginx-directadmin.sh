@@ -1,17 +1,18 @@
 #!/bin/bash
 
 #intall
-yum install perl-libwww-perl
-cd /usr/src/
-wget https://download.configserver.com/csf.tgz
-tar -xzf csf.tgz
-cd csf
-sh install.sh
-cd /usr/local/csf/bin/
-perl csftest.pl
-
+##yum install perl-libwww-perl
+#//cd /usr/src/
+#//wget https://download.configserver.com/csf.tgz
+#tar -xzf csf.tgz
+#cd csf
+#sh install.sh
+#cd /usr/local/csf/bin/
+#perl csftest.pl
+wget http://files.directadmin.com/services/all/csf/csf_install.sh  
+/bin/sh ./csf_install.sh 
 chkconfig --level 235 csf on  
-echo "exe:/bin/tar" >> /etc/csf/csf.pignore
+#echo "exe:/bin/tar" >> /etc/csf/csf.pignore
 systemctl start csf
 systemctl start lfd
 
