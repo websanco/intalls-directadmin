@@ -12,6 +12,12 @@ chmod 755 nginx-directadmin.sh
 ./nginx-directadmin.sh    
 
 
+# Intalls  ALL A_Z  PHP7+5.4 NGINX CSF, LETSCRIPT
+wget https://github.com/websanco/intalls-directadmin/raw/master/php7-all.sh -O php7-all.sh   
+chmod 755 php7-all.sh  
+./php7-all.sh  
+
+
 # Intalls CSF - OPENPORT  
 wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/openport-cfs.sh -O openport-cfs.sh  
 chmod 755 openport-cfs.sh  
