@@ -289,6 +289,36 @@ sudo firewall-cmd --zone=public --add-port=465/tcp
 sudo firewall-cmd --zone=public --add-port=587/tcp
 sudo firewall-cmd --reload
 
+MariaDB 5.5 -> MySQL 5.5 -> MySQL 5.6
+http://forum.directadmin.com/showthread.php?t=50797
+
+cd /usr/local/directadmin/custombuild
+mkdir -p mysql
+cd mysql
+wget http://files.directadmin.com/services/all/mysql/64-bit/5.5.41/MySQL-client-5.5.41-1.linux2.6.x86_64.rpm
+wget http://files.directadmin.com/services/all/mysql/64-bit/5.5.41/MySQL-devel-5.5.41-1.linux2.6.x86_64.rpm
+wget http://files.directadmin.com/services/all/mysql/64-bit/5.5.41/MySQL-server-5.5.41-1.linux2.6.x86_64.rpm
+wget http://files.directadmin.com/services/all/mysql/64-bit/5.5.41/MySQL-shared-5.5.41-1.linux2.6.x86_64.rpm
+cd ..
+./build mysql_backup
+mv mysql_backups mysql_backups.`date +%F`
+
+#after this point, you can't abort
+
+rpm -e --noscripts `rpm -qa | grep MariaDB`
+cd mysql
+rpm -ivh MySQL*5.5.41*.rpm
+
+#ensure it's running.
+
+cd ..
+./build set mysql 5.6
+./build set mysql_inst yes
+./build mysql
+
+# confirm mysqld is running.
+
+./build php n
 
 
 
