@@ -29,7 +29,7 @@ cd /usr/local/directadmin/custombuild
 
 cd /usr/local/directadmin/custombuild
 ./build update
-./build set php1_release 7.0
+./build set php1_release 5.6
 ./build set php2_release 5.4
 ./build set php1_mode php-fpm
 ./build set php2_mode php-fpm
