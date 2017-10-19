@@ -41,8 +41,13 @@ cd /usr/local/directadmin/custombuild
 ./build rewrite_confs
 echo "action=rewrite&value=nginx" >> /usr/local/directadmin/data/task.queue  
 echo "action=rewrite&value=nginx" >> /usr/local/directadmin/dataskq
-service httpd restart
-service nginx restart
+
+#service httpd restart
+#service nginx restart
+systemctl start httpd
+sudo systemctl start nginx
+
+
 cd /usr/local/directadmin
 echo "action=directadmin&value=restart" >> data/task.queue; ./dataskq d2000
 
