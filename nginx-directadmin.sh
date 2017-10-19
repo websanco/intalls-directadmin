@@ -29,10 +29,7 @@ cd /usr/local/directadmin/custombuild
 ./build set mod_ruid2 no
 ./build php n
 ./build rewrite_confs
-cd /usr/local/directadmin/custombuild
-./build update
-./build clean
-./build suphp
+
 cd /usr/local/directadmin/custombuild
 ./build set opcache yes
 ./build opcache
@@ -49,6 +46,10 @@ service nginx restart
 cd /usr/local/directadmin
 echo "action=directadmin&value=restart" >> data/task.queue; ./dataskq d2000
 cd /usr/local/directadmin/custombuild
+cd /usr/local/directadmin/custombuild
+./build update
+./build clean
+./build suphp
 ./build roundcube
 ./build squirrelmail
 ./build phpmyadmin
