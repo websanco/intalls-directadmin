@@ -2,12 +2,12 @@
 
 
 yum -y install iptables-services
-  touch /etc/sysconfig/iptables
-  touch /etc/sysconfig/iptables6
-  systemctl start iptables
-  systemctl start ip6tables
-   systemctl enable iptables
-  systemctl enable ip6tables
+touch /etc/sysconfig/iptables
+touch /etc/sysconfig/iptables6
+systemctl start iptables
+systemctl start ip6tables
+systemctl enable iptables
+systemctl enable ip6tables
 
 wget http://files.directadmin.com/services/all/csf/csf_install.sh  
 /bin/sh ./csf_install.sh 
