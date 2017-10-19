@@ -1,12 +1,12 @@
-# Intalls directadmin
+# Intalls directadmin CENTOST 7
 
-systemctl stop firewalld
+systemctl stop firewalld  
 yum install wget  
 wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/install.sh -O install.sh  
 chmod 755 install.sh  
 ./install.sh  
 
-# Intalls  ALL A_Z 
+# Intalls  ALL A_Z  PHP7, NGINX CSF, LETSCRIPT
 wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/nginx-directadmin.sh -O nginx-directadmin.sh    
 chmod 755 nginx-directadmin.sh   
 ./nginx-directadmin.sh    
