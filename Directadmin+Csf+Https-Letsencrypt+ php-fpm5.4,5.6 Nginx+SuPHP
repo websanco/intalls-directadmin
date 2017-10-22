@@ -334,6 +334,9 @@ systemctl enable ip6tables
 
 MA, CN, UA, FR, RU, DE, PA, NL, NG, SC, ZZ, AR
 
+cd /usr/local/directadmin/custombuild
+./build mysql_backup
+
 
 
 
