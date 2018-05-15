@@ -1,3 +1,11 @@
+
+GIFT
+https://www.vultr.com/?ref=7224032
+https://m.do.co/c/f579d3db6d69
+
+DONATE: http://paypal.me/OnlineServicesVN
+
+
 # Intalls directadmin CENTOST 7
 
  
@@ -12,6 +20,7 @@ chmod 755 install.sh
 wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/nginx-directadmin.sh -O nginx-directadmin.sh    
 chmod 755 nginx-directadmin.sh   
 ./nginx-directadmin.sh    
+
 
 
 # Intalls  ALL A_Z  PHP7+5.4 NGINX CSF, LETSCRIPT
