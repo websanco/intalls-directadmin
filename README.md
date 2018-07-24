@@ -8,7 +8,9 @@ DONATE: http://paypal.me/OnlineServicesVN
 
 # Intalls directadmin CENTOST 7
 
- 
+sudo apt-get install p7zip-full p7zip-rar
+
+
 systemctl disable firewalld  
 systemctl stop firewalld  
 yum install wget  
