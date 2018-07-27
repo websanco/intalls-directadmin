@@ -1,16 +1,4 @@
-
-GIFT
-https://www.vultr.com/?ref=7224032
-https://m.do.co/c/f579d3db6d69
-
-DONATE: http://paypal.me/OnlineServicesVN
-
-
 # Intalls directadmin CENTOST 7
-
-sudo apt-get install p7zip-full p7zip-rar
-
-
 systemctl disable firewalld  
 systemctl stop firewalld  
 yum install wget  
@@ -18,7 +6,7 @@ wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/insta
 chmod 755 install.sh  
 ./install.sh  
 
-update https://help.directadmin.com/item.php?id=354
+
 
 # Intalls  ALL A_Z  PHP5.6,5.4, NGINX CSF, LETSCRIPT
 wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/nginx-directadmin.sh -O nginx-directadmin.sh    
@@ -26,7 +14,19 @@ chmod 755 nginx-directadmin.sh
 ./nginx-directadmin.sh   
 
  
+................................................................................................................
 
+ONLY INTALL TWO LINE DONATE:
+
+GIFT
+https://www.vultr.com/?ref=7224032
+https://m.do.co/c/f579d3db6d69  
+
+DONATE: http://paypal.me/OnlineServicesVN
+
+
+
+sudo apt-get install p7zip-full p7zip-rar
 
 
 # Intalls  ALL A_Z  PHP7+5.4 NGINX CSF, LETSCRIPT
@@ -52,4 +52,4 @@ chmod 755 csf-to-nginx.sh
 nano /etc/csf/csf.conf
 
 
-
+update https://help.directadmin.com/item.php?id=354
