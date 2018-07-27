@@ -18,10 +18,14 @@ wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/insta
 chmod 755 install.sh  
 ./install.sh  
 
+update https://help.directadmin.com/item.php?id=354
+
 # Intalls  ALL A_Z  PHP5.6,5.4, NGINX CSF, LETSCRIPT
 wget https://raw.githubusercontent.com/websanco/intalls-directadmin/master/nginx-directadmin.sh -O nginx-directadmin.sh    
 chmod 755 nginx-directadmin.sh   
-./nginx-directadmin.sh    
+./nginx-directadmin.sh   
+
+ 
 
 
 
