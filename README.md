@@ -16,6 +16,38 @@ chmod 755 nginx-directadmin.sh
  
 ................................................................................................................
 
+FIX DOWLOAD .ZP
+
+vi /etc/mime.types
+
+
+# application/x-font-vfont
+ application/x-freearc arc
+ application/x-futuresplash spl
+ application/x-gca-compressed gca
+ application/x-glulx ulx
+ application/x-gnumeric gnumeric
+ application/x-gramps-xml gramps
+ application/x-gtar gtar
+ application/x-gzip gz
+ application/x-hdf hdf
+ application/x-install-instructions install
+ application/x-iso9660-image iso
+ 
+ 
+systemctl status directadmin.service
+systemctl restart directadmin.service
+ 
+ or
+ 
+ 
+cd /usr/local/directadmin
+echo "action=directadmin&value=restart" >> data/task.queue; ./dataskq d2000
+
+
+
+....................................................
+
 ONLY INTALL TWO LINE DONATE:
 
 GIFT
