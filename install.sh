@@ -11,7 +11,7 @@
 # outputting anything in those cases.
 
 #intall
-yum install gcc gcc-c++ flex bison make bind bind-libs bind-utils openssl openssl-devel perl quota libaio libcom_err-devel libcurl-devel gd zlib-devel zip unzip libcap-devel cronie bzip2 cyrus-sasl-devel perl-ExtUtils-Embed autoconf automake libtool which patch mailx db4-devel
+yum install psmisc net-tools systemd-devel libdb-devel perl-DBI xfsprogs rsyslog logrotate crontabs file
 wget http://www.directadmin.com/setup.sh  
 chmod 755 setup.sh  
 ./setup.sh
