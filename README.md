@@ -109,7 +109,6 @@ lost_password = 0
 
  
 
-http://s1.mainisan.com:2222/CMD_SHOW_USER?user=user1
 
 hide_ip_user_numbers = 0
 Nếu bạn muốn chia sẻ một địa chỉ IP trong số rất nhiều đại lý, ẩn số của người sử dụng trên IP.
