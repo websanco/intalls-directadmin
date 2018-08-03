@@ -85,3 +85,42 @@ nano /etc/csf/csf.conf
 
 
 update https://help.directadmin.com/item.php?id=354
+
+
+
+https://help.directadmin.com/item.php?id=641 (quản lý chung)
+
+ALL https://help.directadmin.com/item.php?id=284
+
+http://help.directadmin.com/item.php?id=354
+
+apache_public_html = 0
+
+echo “=1” >> /usr/local/directadmin/conf/directadmin.conf
+
+cd /usr/local/directadmin
+./directadmin c | grep ^apache_public_html=
+
+service directadmin restart
+
+ 
+
+lost_password = 0
+
+ 
+
+http://s1.mainisan.com:2222/CMD_SHOW_USER?user=user1
+
+hide_ip_user_numbers = 0
+Nếu bạn muốn chia sẻ một địa chỉ IP trong số rất nhiều đại lý, ẩn số của người sử dụng trên IP.
+http://www.directadmin.com/features.php?id=876
+
+1. echo “check_subdomain_owner=1” >> /usr/local/directadmin/conf/directadmin.conf
+
+2.echo “hide_ip_user_numbers=0” >> /usr/local/directadmin/conf/directadmin.conf
+
+cd /usr/local/directadmin
+./directadmin c | grep ^hide_ip_user_numbers=
+
+cd /usr/local/directadmin
+echo “action=directadmin&value=restart” >> data/task.queue; ./dataskq d2000
