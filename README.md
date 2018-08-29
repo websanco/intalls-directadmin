@@ -129,3 +129,8 @@ echo “action=directadmin&value=restart” >> data/task.queue; ./dataskq d2000
 # cd /usr/local/directadmin/custombuild
 # ./build set ioncube yes
 # ./build ioncube
+
+
+wget -N http://files.softaculous.com/install.sh
+chmod 755 install.sh
+./install.sh
