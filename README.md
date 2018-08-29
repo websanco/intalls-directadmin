@@ -134,3 +134,5 @@ echo “action=directadmin&value=restart” >> data/task.queue; ./dataskq d2000
 wget -N http://files.softaculous.com/install.sh
 chmod 755 install.sh
 ./install.sh
+
+http://www.softaculous.com/docs/Adding_Themes
