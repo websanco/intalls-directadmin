@@ -123,3 +123,9 @@ cd /usr/local/directadmin
 
 cd /usr/local/directadmin
 echo “action=directadmin&value=restart” >> data/task.queue; ./dataskq d2000
+
+
+
+# cd /usr/local/directadmin/custombuild
+# ./build set ioncube yes
+# ./build ioncube
