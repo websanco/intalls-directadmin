@@ -18,8 +18,8 @@ systemctl start lfd
 
 echo "letsencrypt=1" >> /usr/local/directadmin/conf/directadmin.conf  
 echo "enable_ssl_sni=1" >> /usr/local/directadmin/conf/directadmin.conf
-echo "check_subdomain_owner=0" >> /usr/local/directadmin/conf/directadmin.conf  
-echo "hide_ip_user_numbers=0" >> /usr/local/directadmin/conf/directadmin.conf 
+echo "check_subdomain_owner=1" >> /usr/local/directadmin/conf/directadmin.conf  
+echo "hide_ip_user_numbers=1" >> /usr/local/directadmin/conf/directadmin.conf 
 /etc/init.d/directadmin restart  
 wget -O /usr/local/directadmin/scripts/letsencrypt.sh http://files.directadmin.com/services/all/letsencrypt.sh  
 cd /usr/local/directadmin/custombuild  
