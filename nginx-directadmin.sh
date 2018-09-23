@@ -86,4 +86,11 @@ cd ..
 
 ./build php n
 
+cd /usr/local/directadmin/custombuild
+./build set ioncube yes
+./build ioncube
+
+wget -N http://files.softaculous.com/install.sh
+chmod 755 install.sh
+./install.sh
 
