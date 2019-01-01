@@ -1,0 +1,111 @@
+Hướng dẫn cài đặt memcache và php-memcache trên directadmin
+Đầu tiên ta phải hiểu Memcache là gì
+
+Memcached là một hệ thống cache hoạt động bằng cách lưu tạm thông tin những dữ liệu bạn hay sử dụng vào bộ nhớ RAM. Do tốc độ đọc ghi của bộ nhớ bao giờ cũng cao hơn so với lưu trữ file nên việc sử dụng memcached giúp cho hệ thống của bạn tăng tốc lên một cách đáng kể.
+
+Mô hình hoạt động của Memcached:
+
+
+
+Trong bài viết này, mình sẽ hướng dẫn các bạn cách cài đặt Memcached trên CentOS 7/6/5.
+
+1. Cài đặt Memcached
+Cài đặt Memcached package
+
+## CentOS 7 and 6
+yum install memcached
+
+## CentOS 5
+yum --enablerepo=remi install memcached
+Bạn cần lưu ý là có 2 memcache package tồn tại là memcache và memcached (có thêm chữ d ở cuối) cũng như có 2 phiên bản PHP Extention Module tương ứng là php-pecl-memcache và php-pecl-memcached. Chúng ta sẽ sử dụng phiên bản thứ 2 (có chữ d) vì nó ổn định và hỗ trợ nhiều chức năng hơn.
+
+2. Cấu hình Memcached
+Thông số quan trọng nhất bạn cần lưu ý đó là CACHESIZE, đơn vị tính là MB. Ví dụ như bên dưới mình sử dụng 128MB để cache (mặc định 64MB). OPTIONS cấu hình bảo mật chỉ cho local connect được tới port 11211 mà thôi.
+
+vi /etc/sysconfig/memcached
+
+PORT="11211"
+USER="memcached"
+MAXCONN="10240"
+CACHESIZE="128"
+OPTIONS="-l 127.0.0.1"
+Khởi động Memcached
+
+chkconfig memcached on
+service memcached start
+3. Cài đặt php-memcache
+Bước 1 : Kiểm tra dịch vụ memcached đã có trên server chưa
+
+# service memcached status
+
+
+Bước 2 : Kiểm tra xem php-memcached đã được tích hợp chưa
+
+php -m | grep memcache
+* : Nếu chưa có gì  thì ta thực hiện cài đặt php-memcache
+
+Bước 3 : Cài đặt php-memcache
+# Cài đặt các gói hỗ trợ cho việc cài đặt
+
+# yum install php-devel php-pear -y
+# Cài đặt php-memcache
+
+yum install libmemcached-devel
+pecl install memcache
+Bước 4 : enable memcache
+– Kiểm tra đường dẫn của file php.ini bằng lệnh :
+
+php -i | grep php.ini
+
+
+đưa module memcache vào php.
+
+ Các bạn nhìn thấy dòng Loaded Configuration File => /usr/local/php56/lib/php.ini
+Thì gõ câu lệnh như sau
+[root@hn ~]# echo "extension=memcache.so" >> /usr/local/php56/lib/php.ini
+Bước 4: Kiểm tra xem module php-memcache đã hoạt động hay chưa ?
+
+php -m | grep memcache
+# Nếu như hình thì bạn đã cài đặt thành công module memcache.
+
+
+
+Chúc các bạn thành công !
+
+2. Cài đặt Zend Opcache
+Zend OPcache
+
+Mục đích sử dụng Zend OPcache để tối ưu và tăng tốc PHP, điều này đặc biệt quan trọng và bắt buộc phải cài với những VPS có số lượng người online lớn. Qua đó giảm thiểu hoạt động của CPU và giảm đáng kể số lượng RAM mà PHP sử dụng.
+
+HocvPS Script đã tự động cài đặt Zend OPcache giúp bạn, giờ chỉ cần điều chỉnh lại các tham số cho phù hợp với nhu cầu sử dụng của bạn mà thôi.
+
+Bạn hãy theo dõi tình hình thực tế khi chạy VPS với 1 trình web viewer, ví dụ opcache-gui (server cài HocVPS thì đường dẫn là http://domain.com:port/op.php). Tăng hoặc giảm bộ nhớ làm sao giữ cho memory usage <= 70% là ổn, bộ nhớ còn trống sẽ được dùng cho các việc khác.
+
+Lưu ý Bước tiếp theo bạn có thể dùng plugin cache như WP Super Cache hoặc Memcached với W3 Total Cache (bước 3 và 4). Nên thử với WP Super Cache trước, vì đa phần các website chỉ cần plugin này là đủ, mà cài đặt lại đơn giản.
+3. Cài đặt Memcached
+VPS-Memcached-WP-Site-Speed
+
+Memcached mình sử dụng để cache query database, object và page cache. Thông thường, các dữ liệu trên thường được cache bằng cách sử dụng disk, nhưng memcached lưu thông tin trên RAM nên hiệu suất và tốc độ được tăng lên rất nhiều.
+
+Các bạn thực hiện theo như hướng dẫn cài đặt memcached. Trong phần Cấu hình Memcached lưu ý tăng thông số MAXCONN="1024" thành MAXCONN="10240"
+
+# nano /etc/sysconfig/memcached
+PORT="11211"
+USER="memcached"
+MAXCONN="10240"
+CACHESIZE="128"
+OPTIONS="-l 127.0.0.1 -U 0"
+Tương tự như Zend OPcache bên trên, bạn nên sử dụng tool theo dõi phpMemcachedAdmin, điều chỉnh đảm bảo cho bộ nhớ <= 70%, tránh việc thừa quá nhiều RAM (như blog Học VPS do chỉ là WordPress nên dành 64MB RAM cho memcached).
+
+Ở bước cuối bạn không cần thiết phải cài plugin WP-FFPC cho WordPress vì chúng ta sẽ sử dụng plugin W3 Total Cache như hướng dẫn bên dưới.
+
+4. Cấu hình W3 Total Cache
+Để đảm bảo mọi thứ hoạt động trơn tru, các bạn hãy sử dụng plugin W3 Total Cache. Bình thường mình vẫn hay sử dụng plugin WP Super Cache vì nó đơn giản, dễ dùng và cũng rất hiệu quả (Canh Me hiện đang dùng). Tuy nhiên khi đã sử dụng đến Memcached, bạn bắt buộc phải chuyển qua W3 Total Cache hoặc WP-FFPC.
+
+W3 Total Cache
+
+Sau khi cài đặt xong plugin, các bạn hãy kích hoạt Page Cache, Database cache và Object Cache sử dụng method là Memcached. Ngoài ra, cũng cần kích hoạt Browser Cache và CDN nếu có thể.
+
+Hãy nhấn vào từng mục để có thể cấu hình chi tiết cụ thể hơn.
+
+Hi vọng, với bài viết này các bạn sẽ có thể tự build được 1 VPS chịu tải tốt. Đừng quên để lại comment bên dưới thông báo kết quả bạn đạt được sau khi thực hiện nhé.
