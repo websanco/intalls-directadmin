@@ -30,10 +30,10 @@ cd /usr/local/directadmin/custombuild
 cd /usr/local/directadmin/custombuild
 ./build update
 
-./build set php2_mode php-fpm
-./build set php1_mode mod_php
-./build set php2_release 5.6
-./build set php1_release 7.1
+./build set php1_mode php-fpm
+./build set php2_mode mod_php
+./build set php1_release 5.6
+./build set php2_release 7.1
 
 #./build set php1_release 5.6
 #./build set php2_release 5.4
