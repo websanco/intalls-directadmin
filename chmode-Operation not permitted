@@ -1,0 +1,12 @@
+
+ls -la
+chmod ugo+w filename
+this failed - then:
+
+chattr -i -a filename 
+which was accepted - then
+
+chmod ugo+w 
+which was accepted
+
+rm filename
