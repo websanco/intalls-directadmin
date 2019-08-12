@@ -11,7 +11,7 @@
 # outputting anything in those cases.
 
 #intall
-yum install psmisc net-tools systemd-devel libdb-devel perl-DBI xfsprogs rsyslog logrotate crontabs file
+yum install psmisc net-tools systemd-devel libdb-devel perl-DBI perl-Perl4-CoreLibs xfsprogs rsyslog logrotate crontabs file kernel-headers
 wget http://www.directadmin.com/setup.sh  
 chmod 755 setup.sh  
 ./setup.sh
