@@ -13,6 +13,9 @@ cd /usr/local/directadmin
 ./directadmin set ssl_redirect_host your.hostname.com
 service directadmin restart
 
+
+vi /usr/local/directadmin/custombuild/options.conf
+
 CHANGE:
 CONFIG API N_S
 IP - SUBNAME
