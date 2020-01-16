@@ -1,1 +1,14 @@
 vi /usr/local/directadmin/conf/directadmin.conf
+
+https://help.directadmin.com/item.php?id=629
+https://help.directadmin.com/item.php?id=284
+
+cd /usr/local/directadmin/scripts
+./letsencrypt.sh request_single your.hostname.com 4096
+
+
+cd /usr/local/directadmin
+./directadmin set ssl 1
+./directadmin set carootcert /usr/local/directadmin/conf/carootcert.pem
+./directadmin set ssl_redirect_host your.hostname.com
+service directadmin restart
