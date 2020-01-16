@@ -12,3 +12,9 @@ cd /usr/local/directadmin
 ./directadmin set carootcert /usr/local/directadmin/conf/carootcert.pem
 ./directadmin set ssl_redirect_host your.hostname.com
 service directadmin restart
+
+CHANGE:
+CONFIG API N_S
+IP - SUBNAME
+
+/bin/hostname --fqdn
