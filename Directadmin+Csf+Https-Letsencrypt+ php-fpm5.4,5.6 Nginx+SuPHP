@@ -389,6 +389,12 @@ cd /usr/local/directadmin/custombuild
 ./build php n
 
 
+Syntax error on line 243 of /etc/httpd/conf/extra/httpd-ssl.conf:
+Invalid command 'SSLOpenSSLConfCmd', perhaps misspelled or defined by a module n                     ot included in the server configuration
+[root@server ~]# ^C
+[root@server ~]# vi /etc/httpd/conf/extra/httpd-ssl.conf
+
+
 
 
 
