@@ -338,6 +338,57 @@ cd /usr/local/directadmin/custombuild
 ./build mysql_backup
 
 
+<select class="selectclass" name="file">
+<option value="/etc/aliases">/etc/aliases - 1.50 KB</option>
+<option value="/etc/dovecot/dovecot.conf">/etc/dovecot/dovecot.conf - 1.21 KB</option>
+<option value="/etc/exim.cert">/etc/exim.cert - 3.82 KB</option>
+<option value="/etc/exim.conf">/etc/exim.conf - 34.9 KB</option>
+<option value="/etc/exim.key">/etc/exim.key - 3.17 KB</option>
+<option value="/etc/hosts.allow">/etc/hosts.allow - 370 B</option>
+<option value="/etc/hosts.deny">/etc/hosts.deny - 460 B</option>
+<option value="/etc/httpd/conf/extra/httpd-includes.conf">/etc/httpd/conf/extra/httpd-includes.conf - 566 B</option>
+<option value="/etc/httpd/conf/httpd.conf">/etc/httpd/conf/httpd.conf - 6.90 KB</option>
+<option value="/etc/httpd/conf/ssl.crt/server.crt">/etc/httpd/conf/ssl.crt/server.crt - 2.22 KB</option>
+<option value="/etc/httpd/conf/ssl.key/server.key">/etc/httpd/conf/ssl.key/server.key - 3.17 KB</option>
+<option value="/etc/named.conf">/etc/named.conf - 9.47 KB</option>
+<option value="/etc/proftpd.conf">/etc/proftpd.conf - 2.10 KB</option>
+<option value="/etc/proftpd.vhosts.conf">/etc/proftpd.vhosts.conf - 0 B</option>
+<option value="/etc/pure-ftpd.conf">/etc/pure-ftpd.conf - 10.9 KB</option>
+<option value="/etc/ssh/sshd_config">/etc/ssh/sshd_config - 3.87 KB</option>
+<option value="/etc/system_filter.exim">/etc/system_filter.exim - 12.5 KB</option>
+<option value="/etc/virtual/domainips">/etc/virtual/domainips - does not exist</option>
+<option value="/etc/virtual/helo_data">/etc/virtual/helo_data - does not exist</option>
+<option value="/etc/virtual/snidomains">/etc/virtual/snidomains - 0 B</option>
+<option value="/usr/local/directadmin/conf/cacert.pem">/usr/local/directadmin/conf/cacert.pem - 2.22 KB</option>
+<option value="/usr/local/directadmin/conf/cakey.pem">/usr/local/directadmin/conf/cakey.pem - 3.17 KB</option>
+<option value="/usr/local/directadmin/conf/carootcert.pem">/usr/local/directadmin/conf/carootcert.pem - 1.61 KB</option>
+<option value="/usr/local/directadmin/conf/directadmin.conf">/usr/local/directadmin/conf/directadmin.conf - 2.49 KB</option>
+<option value="/usr/local/directadmin/data/admin/ip_blacklist">/usr/local/directadmin/data/admin/ip_blacklist - 0 B</option>
+<option value="/usr/local/directadmin/data/admin/ip_whitelist">/usr/local/directadmin/data/admin/ip_whitelist - does not exist</option>
+<option value="/usr/local/directadmin/data/templates/edit_files.txt">/usr/local/directadmin/data/templates/edit_files.txt - 3.64 KB</option>
+<option value="/usr/local/directadmin/data/templates/per_email_limit_email_message.txt">/usr/local/directadmin/data/templates/per_email_limit_email_message.txt - 1.41 KB</option>
+<option value="/usr/local/etc/php5/cgi/php.ini">/usr/local/etc/php5/cgi/php.ini - 68.0 KB</option>
+<option value="/usr/local/lib/php.ini">/usr/local/lib/php.ini - 28 B</option>
+<option value="/usr/local/php54/lib/php.ini">/usr/local/php54/lib/php.ini - 63.9 KB</option>
+<option value="/usr/local/php56/lib/php.ini">/usr/local/php56/lib/php.ini - 72.0 KB</option>
+<option value="/usr/local/php71/lib/php.ini">/usr/local/php71/lib/php.ini - 69.5 KB</option>
+<option selected="" value="/usr/local/php73/lib/php.ini">/usr/local/php73/lib/php.ini - 70.3 KB</option>
+<option value="/usr/local/php74/lib/php.ini">/usr/local/php74/lib/php.ini - 68.0 KB</option>
+</select>
+
+cd /usr/local/directadmin/custombuild
+./build update
+./build set php1_release 5.6
+./build set php2_release 7.2
+./build set php3_release 7.3
+./build set php4_release 7.4
+./build set php1_mode php-fpm
+./build set php2_mode php-fpm
+./build set php3_mode php-fpm
+./build set php4_mode php-fpm
+./build php n
+
+
 
 
 
