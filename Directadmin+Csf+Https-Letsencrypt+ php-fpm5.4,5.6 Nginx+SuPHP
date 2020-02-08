@@ -397,6 +397,12 @@ Invalid command 'SSLOpenSSLConfCmd', perhaps misspelled or defined by a module n
 
 Quá trình build sẽ diễn ra, để tránh việc mất kết nối làm quá trình build bị lỗi, bạn nên nhấn Ctrl + A +D để thoát khỏi session hiện tại và nhấn screen -r nếu muốn quay lại màn hình build
 
+rpm -q openssl-devel
+yum -y install krb5-devel
+yum -y install cmake
+
+
+
 
 
 
