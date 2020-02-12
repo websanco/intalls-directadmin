@@ -407,5 +407,7 @@ yum -y install cmake
 /etc/nginx/directadmin-vhosts.conf
 /usr/local/directadmin/data/users/game/nginx.conf;
 
+15 *  *  *  * /home/cache.sh
+0 */2  *  *  * /home/nginx.sh
 
 
