@@ -416,3 +416,9 @@ Check /var/log/messages for errors
 service named restart
 chmod 644 /etc/named.conf
 
+
+0,30 * * * * sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
+service crond restart 
+
+
+
