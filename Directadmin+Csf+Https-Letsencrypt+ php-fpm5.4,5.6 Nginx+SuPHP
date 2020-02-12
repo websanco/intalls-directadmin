@@ -410,4 +410,9 @@ yum -y install cmake
 15 *  *  *  * /home/cache.sh
 0 */2  *  *  * /home/nginx.sh
 
+service named configtest
+Check /var/log/messages for errors
+/etc/named.conf
+service named restart
+chmod 644 /etc/named.conf
 
