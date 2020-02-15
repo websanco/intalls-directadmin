@@ -421,4 +421,17 @@ chmod 644 /etc/named.conf
 service crond restart 
 
 
+cd /usr/local/directadmin/custombuild
+./build update
+./build set php1_release 5.6
+./build set php2_release 7.1
+./build set php3_release 7.2
+./build set php4_release 7.3
+./build set php1_mode php-fpm
+./build set php2_mode php-fpm
+./build set php3_mode fastcgi
+./build set php4_mode php-fpm
+./build php n
+
+
 
