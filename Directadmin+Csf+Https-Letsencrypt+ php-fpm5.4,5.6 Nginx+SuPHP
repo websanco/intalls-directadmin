@@ -112,6 +112,12 @@ echo "action=rewrite&value=nginx" >> /usr/local/directadmin/dataskq
 service httpd restart
 service nginx restart
 
+<FilesMatch "^(xmlrpc\.php)">
+ order allow,deny
+ deny from all
+
+</FilesMatch>
+
 
 FINISH INTALL DIRECTADMIN FOR NGINX PROXY
 
