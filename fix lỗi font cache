@@ -1,0 +1,6 @@
+vi /usr/local/directadmin/data/users/cdnname/nginx.conf
+
+fix loi hay ne
+location ~* \.(eot|ttf|woff|woff2)$ {
+    add_header Access-Control-Allow-Origin *;
+}
