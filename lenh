@@ -1,0 +1,9 @@
+/etc/init.d/named restart
+/etc/init.d/directadmin restart
+/etc/virtual/domains  list domain
+/etc/virtual/domainowners  - thuoc su huu
+/etc/virtual/domain.com
+
+vi /etc/named.conf
+
+/etc/named.root.key
