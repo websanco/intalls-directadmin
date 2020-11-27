@@ -1,0 +1,11 @@
+You need to update /etc/my.cnf to fit your needs, and add
+
+Code:
+[mysqld]
+character-set-server=utf8
+collation-server=utf8_general_ci
+
+More details:
+http://dev.mysql.com/doc/refman/5.0/en/charset-applications.html
+
+/etc/my.cnf
