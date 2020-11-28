@@ -1,0 +1,18 @@
+/etc/my.cnf
+[mysqld]
+character-set-server=utf8
+collation-server=utf8_general_ci
+port		= 3306
+socket		= /var/lib/mysql/mysql.sock
+skip-external-locking
+key_buffer_size = 384M
+max_allowed_packet = 1M
+table_open_cache = 512
+sort_buffer_size = 2M
+read_buffer_size = 2M
+read_rnd_buffer_size = 8M
+myisam_sort_buffer_size = 64M
+thread_cache_size = 8
+query_cache_size = 32M
+
+service mysqld restart
