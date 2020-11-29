@@ -16,3 +16,14 @@ thread_cache_size = 8
 query_cache_size = 32M
 
 service mysqld restart
+
+>8G
+wget -O /etc/my.cnf http://files.directadmin.com/services/all/mysql/my-huge-5.5.cnf
+
+2G
+wget -O /etc/my.cnf http://files.directadmin.com/services/all/mysql/my-medium-5.5.cnf
+
+
+4G
+wget -O /etc/my.cnf http://files.directadmin.com/services/all/mysql/my-large-5.5.cnf
+http://files.directadmin.com/services/all/mysql/my-large-5.5.cnf
