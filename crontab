@@ -1,0 +1,4 @@
+crontab -e
+https://crontab.guru/every-6-hours
+
+/etc/init.d/crond restart
