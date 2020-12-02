@@ -1,4 +1,4 @@
 crontab -e
 https://crontab.guru/every-6-hours
-
+0 */6 * * * sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
 /etc/init.d/crond restart
