@@ -1,2 +1,12 @@
 cau hinh ipv6 here
 cd /usr/local/directadmin/data/admin/ips/
+
+gateway=2400:6180:0:d0::1
+linked_ips=
+netmask=/64
+ns=
+reseller=
+status=server- free
+value=0
+~
+
