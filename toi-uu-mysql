@@ -30,4 +30,12 @@ http://files.directadmin.com/services/all/mysql/my-large-5.5.cnf
 
 vi /usr/local/php73/etc/php-fpm.conf
 
+
+pm = ondemand
 pm.max_children = 100
+pm.process_idle_timeout = 60
+pm.max_requests = 2000
+pm.start_servers = 16
+pm.min_spare_servers = 8
+pm.max_spare_servers = 16
+
