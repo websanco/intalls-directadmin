@@ -27,3 +27,7 @@ wget -O /etc/my.cnf http://files.directadmin.com/services/all/mysql/my-medium-5.
 4G
 wget -O /etc/my.cnf http://files.directadmin.com/services/all/mysql/my-large-5.5.cnf
 http://files.directadmin.com/services/all/mysql/my-large-5.5.cnf
+
+vi /usr/local/php73/etc/php-fpm.conf
+
+pm.max_children = 100
