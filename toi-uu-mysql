@@ -28,6 +28,7 @@ wget -O /etc/my.cnf http://files.directadmin.com/services/all/mysql/my-medium-5.
 wget -O /etc/my.cnf http://files.directadmin.com/services/all/mysql/my-large-5.5.cnf
 http://files.directadmin.com/services/all/mysql/my-large-5.5.cnf
 
+vi /usr/local/php71/etc/php-fpm.conf
 vi /usr/local/php73/etc/php-fpm.conf
 
 
@@ -53,5 +54,19 @@ pm.max_requests = 1000
 pm.start_servers = 37
 pm.min_spare_servers = 25
 pm.max_spare_servers = 75
+
+cd /usr/local/directadmin/custombuild
+./build rewrite_confs  
+
+
+tar -cvf custom_multidomain_directadmin.tar custom
+
+zip -r custom.zip /usr/local/directadmin/data/templates/custom
+
+cp /home/admin/custom.zip /usr/local/directadmin/data/templates/
+
+unzip custom.zip
+
+
 
 
