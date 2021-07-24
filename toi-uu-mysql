@@ -46,3 +46,12 @@ pm.start_servers = 37
 pm.min_spare_servers = 25
 pm.max_spare_servers = 75
 
+pm = dynamic
+pm.max_children = 125
+pm.process_idle_timeout = 60
+pm.max_requests = 1000
+pm.start_servers = 37
+pm.min_spare_servers = 25
+pm.max_spare_servers = 75
+
+
