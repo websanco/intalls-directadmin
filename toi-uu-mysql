@@ -63,7 +63,7 @@ tar -cvf custom_multidomain_directadmin.tar custom
 
 zip -r custom.zip /usr/local/directadmin/data/templates/custom
 
-cp /home/admin/custom.zip /home/admin
+cp /usr/local/directadmin/data/templates/custom1.zip /home/admin
 
 unzip custom.zip
 
