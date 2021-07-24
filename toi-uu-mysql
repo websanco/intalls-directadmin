@@ -41,8 +41,8 @@ pm.max_spare_servers = 16
 
 
 pm = dynamic
-[pm.max_children = 125]
-[pm.start_servers = 37]
-[pm.min_spare_servers = 25]
-[pm.max_spare_servers = 75]
+pm.max_children = 125
+pm.start_servers = 37
+pm.min_spare_servers = 25
+pm.max_spare_servers = 75
 
