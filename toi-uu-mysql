@@ -83,17 +83,9 @@ pm.process_idle_timeout = 10
 |?START_FPM=16|
 |?MIN_SV_FPM=8|
 |?MAX_SV_FPM=16|
-|?MAX_REQUEST_FPM=1000|
+|?MAX_REQUESTS=1000|
 |?MAX_PROCESS_FPM=10|
 
-
-|?PM_FPM=dynamic|
-|?MAX_CHILDREN=125|
-|?START_FPM=37|
-|?MIN_SV_FPM=25|
-|?MAX_SV_FPM=75|
-|?MAX_REQUEST_FPM=1000|
-|?MAX_PROCESS_FPM=60|
 
 
 pm = |PM_FPM|
@@ -101,9 +93,19 @@ pm.max_children = |MAX_CHILDREN|
 pm.start_servers = |START_FPM|
 pm.min_spare_servers = |MIN_SV_FPM|
 pm.max_spare_servers = |MAX_SV_FPM|
-pm.max_requests = |MAX_REQUEST_FPM|
+pm.max_requests = |MAX_REQUESTS|
 pm.process_idle_timeout = |MAX_PROCESS_FPM|
 
 
+
+//custome
+
+|?PM_FPM=dynamic|
+|?MAX_CHILDREN=125|
+|?START_FPM=37|
+|?MIN_SV_FPM=25|
+|?MAX_SV_FPM=75|
+|?MAX_REQUESTS=1000|
+|?MAX_PROCESS_FPM=60|
 
 
