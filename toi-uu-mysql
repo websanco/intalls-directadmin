@@ -68,5 +68,42 @@ cp /usr/local/directadmin/data/templates/custom1.zip /home/admin
 unzip custom.zip
 
 
+ /usr/local/directadmin/data/templates/php-fpm.conf
+ 
+pm = dynamic
+pm.max_children = 20
+pm.start_servers = 16
+pm.min_spare_servers = 8
+pm.max_spare_servers = 16
+pm.max_requests = 1000
+pm.process_idle_timeout = 10
+
+|?PM_FPM=dynamic|
+|?MAX_CHILDREN=20|
+|?START_FPM=16|
+|?MIN_SV_FPM=8|
+|?MAX_SV_FPM=16|
+|?MAX_REQUEST_FPM=1000|
+|?MAX_PROCESS_FPM=10|
+
+
+|?PM_FPM=dynamic|
+|?MAX_CHILDREN=125|
+|?START_FPM=37|
+|?MIN_SV_FPM=25|
+|?MAX_SV_FPM=75|
+|?MAX_REQUEST_FPM=1000|
+|?MAX_PROCESS_FPM=60|
+
+
+pm = |PM_FPM|
+pm.max_children = |MAX_CHILDREN|
+pm.start_servers = |START_FPM|
+pm.min_spare_servers = |MIN_SV_FPM|
+pm.max_spare_servers = |MAX_SV_FPM|
+pm.max_requests = |MAX_REQUEST_FPM|
+pm.process_idle_timeout = |MAX_PROCESS_FPM|
+
+
 
 
