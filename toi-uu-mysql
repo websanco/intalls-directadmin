@@ -120,4 +120,10 @@ cd /usr/local/directadmin/custombuild
 ./build set php4_mode php-fpm
 ./build php n
 
+cat /proc/sys/vm/swappiness
+echo 20 > /proc/sys/vm/swappiness
+# vi /etc/sysctl.conf
+vm.swappiness=20
+
+
 
