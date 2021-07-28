@@ -126,4 +126,4 @@ echo 20 > /proc/sys/vm/swappiness
 vm.swappiness=20
 
 
-
+vi /etc/name.conf
