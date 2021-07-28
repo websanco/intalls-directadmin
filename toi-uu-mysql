@@ -127,3 +127,8 @@ vm.swappiness=20
 
 
 vi /etc/name.conf
+/etc/sysconfig/named
+ DISABLE_ZONE_CHECKING 
+ DISABLE_ZONE_CHECKING="yes"
+ service named status
+ service named start
