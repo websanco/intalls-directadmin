@@ -1,0 +1,10 @@
+root@debian:/home# df -l
+Filesystem     1K-blocks    Used Available Use% Mounted on
+udev             1014356       0   1014356   0% /dev
+tmpfs             204588   20900    183688  11% /run
+/dev/vda1       51570124 7453184  41982660  16% /
+tmpfs            1022928       0   1022928   0% /dev/shm
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs            1022928       0   1022928   0% /sys/fs/cgroup
+tmpfs             204584       0    204584   0% /run/user/0
+/dev/sda        31078308   45080  29443980   1% /home
