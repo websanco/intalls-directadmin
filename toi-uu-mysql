@@ -132,3 +132,8 @@ vi /etc/name.conf
  DISABLE_ZONE_CHECKING="yes"
  service named status
  service named start
+ 
+ add to my.cnf three lines:
+innodb_buffer_pool_size=1G
+table_definition_cache=9000
+skip-name-resolve
